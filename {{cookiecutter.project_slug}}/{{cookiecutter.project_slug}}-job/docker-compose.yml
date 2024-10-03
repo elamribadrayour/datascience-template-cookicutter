@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  "{{cookiecutter.project_slug}}-job-prepare":
+    user: root
+    image: "{{cookiecutter.project_slug}}-job:0.1"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      CACHE_PATH: "/code/data"
+      EXEC_DATE: "2024-09-26-16-53-04"
+    volumes:
+      - ./src/job/:/code/job
+      - ../{{cookiecutter.project_slug}}-cache:/code/data
+    command: python main.py prepare
+
+  "{{cookiecutter.project_slug}}-job-train":
+    user: root
+    image: "{{cookiecutter.project_slug}}-job:0.1"
+    environment:
+      CACHE_PATH: "/code/data"
+      MODEL_NAME: "xgboost_classifier"
+    volumes:
+      - ./src/job/:/code/job
+      - ../{{cookiecutter.project_slug}}-cache:/code/data
+    command: python main.py train
+
+  "{{cookiecutter.project_slug}}-job-evaluate":
+    user: root
+    image: "{{cookiecutter.project_slug}}-job:0.1"
+    environment:
+      CACHE_PATH: "/code/data"
+      MODEL_NAME: "xgboost_classifier"
+    volumes:
+      - ./src/job/:/code/job
+      - ../{{cookiecutter.project_slug}}-cache:/code/data
+    command: python main.py evaluate
+ 
