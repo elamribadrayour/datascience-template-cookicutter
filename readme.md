@@ -78,7 +78,7 @@ This project is licensed under the MIT License.
 
 ## 📨 Contact
 
-For any questions or feedback, please contact at [{{cookiecutter.user_email}}](mailto:{{cookiecutter.user_email}}).
+For any questions or feedback, please contact at [badrayour.elamr@protonmail.com](mailto:{{cookiecutter.user_email}}).
 
 ---
 
