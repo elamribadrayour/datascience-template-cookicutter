@@ -78,6 +78,7 @@ def configure_job_project():
         "matplotlib",
         "imbalanced-learn",
         "joblib",
+        "kaggle"
     ]
 
     job_ci_dependencies = [

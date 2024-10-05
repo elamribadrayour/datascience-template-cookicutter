@@ -34,10 +34,10 @@ To create a new data science project using this template, follow these steps:
    Execute the following command and follow the prompts to customize your project:
 
    ```bash
-   python3 -m cookiecutter gh:elamribadrayour/cookiecutter-datascience-template
+   python3 -m cookiecutter gh:elamribadrayour/datascience-template-coookiecutter
    ```
 
-   Replace `gh:elamribadrayour/cookiecutter-datascience-template` with the appropriate repository URL or path if you are using a local template.
+   Replace `gh:elamribadrayour/datascience-template-coookiecutter` with the appropriate repository URL or path if you are using a local template.
 
 ### Project Structure
 
