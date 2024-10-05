@@ -30,7 +30,7 @@ def add_dependencies(
         if ci_dependencies:
             for dep in ci_dependencies:
                 logging.info(f"Adding development dependency: {dep}")
-                subprocess.run(["poetry", "add", dep, "--group", "dev"], check=True)
+                subprocess.run(["poetry", "add", dep, "--group", "ci"], check=True)
     except subprocess.CalledProcessError as e:
         logging.error(f"An error occurred while adding dependencies: {e}")
     finally:
